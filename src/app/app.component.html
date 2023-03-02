@@ -7,6 +7,29 @@
     </h1>
 
   </div>
+  <div class="row mb-3">
+    <div class="col-6">
+      <div>Selecione uma API do Open Finance:</div>
+      <div>
+        <select [(ngModel)]="opfSelectedAPI" (change)="loadLeftSwaggerView()" class="form-select">
+          <option *ngFor="let api of openFinanceApis" [ngValue]="api">{{ api.apiName }}</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="col-6">
+
+      <div>Selecione uma API do Open Insurance:</div>
+
+      <div>
+        <select [(ngModel)]="opinSelectedAPI" (change)="loadRightSwaggerView($event)" class="form-select">
+          <option *ngFor="let api of openInsuranceApis" [ngValue]="api">{{ api.name }}</option>
+        </select>
+
+      </div>
+    </div>
+  </div>
+
   <div class="row h-100">
     <div class="col-6 h-100 overflow-scroll" style="overflow-y: scroll;" #left_swagger_ui>
     </div>
