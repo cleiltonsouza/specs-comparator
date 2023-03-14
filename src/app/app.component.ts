@@ -69,11 +69,12 @@ export class AppComponent implements OnInit {
   }
 
   loadLeftSwaggerView() {
-    SwaggerUI({
+    SwaggerUIBundle({
       domNode: this.leftSwaggerViewContainer?.nativeElement,
       presets: [SwaggerUIBundle['presets'].apis, SwaggerUIStandalonePreset],
       layout: "StandaloneLayout",
-      urls: this.opfSelectedAPI.specs
+      urls: this.opfSelectedAPI.specs,
+      "urls.primaryName": this.opfSelectedAPI.specs.sort().at(-1).name
     })
   }
 }

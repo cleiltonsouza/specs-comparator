@@ -3,7 +3,7 @@
   <div class="row">
 
     <h1>
-      Specs Comparator
+      OpenAPI Comparator
     </h1>
 
   </div>
@@ -12,7 +12,7 @@
       <div>Selecione uma API do Open Finance:</div>
       <div>
         <select [(ngModel)]="opfSelectedAPI" (change)="loadLeftSwaggerView()" class="form-select">
-          <option *ngFor="let api of openFinanceApis" [ngValue]="api">{{ api.apiName }}</option>
+          <option *ngFor="let api of openFinanceApis | sortByOrder:'apiName'" [ngValue]="api">{{ api.apiName }}</option>
         </select>
 
       </div>
@@ -23,7 +23,7 @@
 
       <div>
         <select [(ngModel)]="opinSelectedAPI" (change)="loadRightSwaggerView($event)" class="form-select">
-          <option *ngFor="let api of openInsuranceApis" [ngValue]="api">{{ api.name }}</option>
+          <option *ngFor="let api of openInsuranceApis | sortByOrder:'name'" [ngValue]="api">{{ api.name }}</option>
         </select>
 
       </div>
