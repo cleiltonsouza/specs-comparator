@@ -64,6 +64,7 @@ export class AppComponent implements OnInit {
       domNode: this.rightSwaggerViewContainer?.nativeElement,
       presets: [SwaggerUIBundle['presets'].apis, SwaggerUIStandalonePreset],
       layout: "StandaloneLayout",
+      deepLinking: true,
       url: this.opinSelectedAPI.url
     })
   }
@@ -74,6 +75,7 @@ export class AppComponent implements OnInit {
       presets: [SwaggerUIBundle['presets'].apis, SwaggerUIStandalonePreset],
       layout: "StandaloneLayout",
       urls: this.opfSelectedAPI.specs,
+      deepLinking: true,
       "urls.primaryName": this.opfSelectedAPI.specs.sort().at(-1).name
     })
   }
