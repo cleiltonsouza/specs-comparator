@@ -1,39 +1,26 @@
 <div class="container-fluid vh-100 d-flex flex-column">
-
-  <div class="row">
-
-    <h1>
-      OpenAPI Comparator
-    </h1>
-
-  </div>
-  <div class="row mb-3">
-    <div class="col-6">
+  <h3>
+    OpenAPI Comparator
+  </h3>
+  <div class="row " style="height: 95%;">
+    <div class="col-6 h-100 overflow-scroll" style="overflow-y: scroll;">
       <div>Selecione uma API do Open Finance:</div>
-      <div>
+      <div class="mb-3">
         <select [(ngModel)]="opfSelectedAPI" (change)="loadLeftSwaggerView()" class="form-select">
-          <option *ngFor="let api of openFinanceApis | sortByOrder:'apiName'" [ngValue]="api">{{ api.apiName }}</option>
+          <option *ngFor="let api of openFinanceApis | sortByOrder:'apiName'" [ngValue]="api">{{ api.apiName }}
+          </option>
         </select>
-
       </div>
+      <div #left_swagger_ui></div>
     </div>
-    <div class="col-6">
-
+    <div class="col-6 h-100 overflow-scroll" style="overflow-y: scroll;">
       <div>Selecione uma API do Open Insurance:</div>
-
-      <div>
+      <div class="mb-3">
         <select [(ngModel)]="opinSelectedAPI" (change)="loadRightSwaggerView($event)" class="form-select">
           <option *ngFor="let api of openInsuranceApis | sortByOrder:'name'" [ngValue]="api">{{ api.name }}</option>
         </select>
-
       </div>
-    </div>
-  </div>
-
-  <div class="row h-100">
-    <div class="col-6 h-100 overflow-scroll" style="overflow-y: scroll;" #left_swagger_ui>
-    </div>
-    <div class="col-6 h-100 overflow-scroll" style="overflow-y: scroll;" #right_swagger_ui>
+      <div #right_swagger_ui></div>
     </div>
   </div>
 </div>
