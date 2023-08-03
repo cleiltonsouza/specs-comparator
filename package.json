@@ -1,5 +1,5 @@
 {
-  "name": "specs-comparator",
+  "name": "compare-apis",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

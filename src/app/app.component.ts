@@ -8,7 +8,7 @@ import { SwaggerUIBundle, SwaggerUIStandalonePreset } from 'swagger-ui-dist'
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  title = 'specs-comparator';
+  title = 'compare-apis';
   @ViewChild('left_swagger_ui') leftSwaggerViewContainer!: ElementRef
   @ViewChild('right_swagger_ui') rightSwaggerViewContainer!: ElementRef
 
