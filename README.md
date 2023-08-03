@@ -16,5 +16,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 
-`Attention`: This project uses the GitHub REST API which has the issue of a limited rate limit for non authenticated requests. The script makes some requests to get the APIs links, but in some cases it may exhaust the rate limit quota. A possible workaround for this is to implement some caching strategy or maybe use a GitHub token to make the requests
+`Attention`: This project uses the GitHub REST API which has the issue of a limited rate limit for non authenticated requests. The script makes some requests to get the APIs links, but in some cases it may exhaust the rate limit quota which is by the user IP. A possible workaround for this is to implement some caching strategy or maybe use a GitHub token to make the requests
 
