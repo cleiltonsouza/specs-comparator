@@ -20,8 +20,10 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getOpenFinanceSpecs()
-    this.getOpenInsuranceSpecs()
+    // Disable the bottom line to redirect to an external site
+    window.location.href = "https://sensedia.github.io/compare-apis"
+    // this.getOpenFinanceSpecs()
+    // this.getOpenInsuranceSpecs()
   }
 
   getOpenInsuranceSpecs() {
