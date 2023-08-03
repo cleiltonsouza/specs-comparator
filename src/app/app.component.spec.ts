@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'specs-comparator'`, () => {
+  it(`should have as title 'compare-apis'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('specs-comparator');
+    expect(app.title).toEqual('compare-apis');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('specs-comparator app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('compare-apis app is running!');
   });
 });
